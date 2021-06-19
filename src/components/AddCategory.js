@@ -8,11 +8,12 @@ const [Inputvalue, setInputvalue] = useState('')
 
 
 const handleInputChange = (e) => {
-    setInputvalue(e.target.value);
+    setInputvalue(e.target.value);    
 }
 
 
 const handleSubmit = (e) => {
+
     e.preventDefault();
     
     if(Inputvalue.trim().length > 2){
@@ -25,7 +26,8 @@ const handleSubmit = (e) => {
 
 return (
    
-        <form onSubmit={ handleSubmit }>         
+        <form onSubmit={ handleSubmit }>     
+        <p> {Inputvalue} </p>    
             <input
                 type="text"
                 value={ Inputvalue }
